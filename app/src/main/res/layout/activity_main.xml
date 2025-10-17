@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="8dp"
+    android:background="#000000">
+
+    <!-- Заряд -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔋 100%"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_battery"
+        android:includeFontPadding="false"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Время -->
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12:34:56"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_time"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="2dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="48sp"
+        android:autoSizeMaxTextSize="@dimen/text_time"
+        android:autoSizeStepGranularity="2sp"/>
+
+    <!-- Дата -->
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пн, 06 окт 2025"
+        android:textColor="#A0A0A0"
+        android:textSize="@dimen/text_date"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Погода: иконка + текст -->
+    <LinearLayout
+        android:id="@+id/weatherRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/textWeatherIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_weather_icon"
+            android:includeFontPadding="false"
+            android:layout_marginRight="6dp"/>
+
+        <TextView
+            android:id="@+id/textWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weather_loading"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_weather"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+
+    <!-- Шаги -->
+    <TextView
+        android:id="@+id/textSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Шаги: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_steps"
+        android:includeFontPadding="false"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

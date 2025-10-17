@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Watch Minimal</string>
+
+    <string name="battery_fmt">🔋 %1$d%%</string>
+
+    <string name="steps_fmt">Шаги: %1$d</string>
+    <string name="steps_unavailable">Шаги: нет датчика</string>
+
+    <string name="weather_loading">Погода: обновляю…</string>
+    <string name="weather_error">Погода: нет данных</string>
+</resources>

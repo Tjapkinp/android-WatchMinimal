@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.watchminimal'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.watchminimal"
+        minSdk 26
+        targetSdk 33   // Wear OS на Android 8.x
+        versionCode 1
+        versionName "1.0"
+
+        // Часы
+        manifestPlaceholders = [appLabel: "Watch Minimal"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Java 8 совместимость
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    //implementation 'androidx.wear:wear:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    // Для совместимости ambient и пр. можно добавить при желании:
+    // implementation 'androidx.wear:wear-ongoing:1.0.0'
+}
